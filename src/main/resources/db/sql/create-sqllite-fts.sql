@@ -1,0 +1,11 @@
+drop table DimensionValue;
+create VIRTUAL TABLE  IF NOT EXISTS DimensionValue USING fts4(
+ID,
+SORTORDER ,
+PARENTID ,
+CODE ,
+ABBREVIATION ,
+DESCRIPTION ,
+DIMENSIONID ,
+TREEDEPTH );
+DELETE  FROM DimensionValue;
